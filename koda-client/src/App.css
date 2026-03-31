@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Londrina Solid', cursive;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f4f8; /* A light color instead of black to blend with the sky */
+  overflow-x: hidden;
+}
+
+/* Main Dashboard Layout */
+.dashboard-container {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  /* Ensure the background image starts at the very top */
+  background-position: top center; 
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* The Header */
+.dashboard-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; /* Ensures it stretches to both sides */
+  margin: 0;
+  width: 100%;
+  height: 100px; /* Defined height to help us calculate spacing */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 1000;
+}
+
+.dashboard-header h1 {
+  font-size: 38px; /* Londrina looks a bit smaller, so we boost the size */
+  font-weight: 400; /* Regular weight usually looks best for this font */
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+/* Glassmorphism Card (The "Frosted" Look) */
+.glass-card {
+  width: 90%;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  border-radius: 28px;
+  padding: 24px;
+  margin-bottom: 40px; /* Large space between cards */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-header {
+  display: flex;
+  align-items: center; /* Vertically centers icon with text */
+  gap: 12px;
+  font-size: 24px;
+  color: #000000; 
+}
+
+.first-card {
+  margin-top: 140px !important; /* Pushes the first card 130px down from the top edge */
+}
+
+/* Content inside cards */
+.empty-msg {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 26px; /* Larger size to make it readable */
+  font-weight: 400;
+  margin-bottom: 15px;
+  text-transform: lowercase;
+}
+
+.empty-msg-light {
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 300; /* This makes it "Light" */
+  font-size: 18px;  /* Smaller than the 24px/26px headers */
+  color: #000000;      /* Slightly softer grey than the black titles */
+  margin-top: 5px;
+  letter-spacing: 0.3px;
+  opacity: 0.9;
+}
+
+/* The Character (Bear) */
+.bear-character {
+  position: absolute;
+  bottom: 100px; /* Sits just above the nav bar */
+  left: 20%;    /* Moves him to that grass patch on the left */
+  width: 80px;  /* Scaled down so he's not "too big" */
+  z-index: 50;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.koda-logo {
+  height: 70px; 
+  width: auto;
+}
+
+.baby-name {
+  font-size: 32px;
+  margin-left: -20px; 
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px; /* Standard mobile nav height */
+  padding-bottom: env(safe-area-inset-bottom); /* Fix for iPhone "Home Bar" */
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-icon {
+  color: #000000; /* Keeps all icons the same dark grey/black */
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.nav-icon:hover {
+  opacity: 0.6;
+}
+
+.plus-btn {
+  color: #000;
+  transform: scale(1.1);
+}
+
+.name-dropdown-btn {
+  background: none;
+  border: none;
+  font-family: 'Londrina Solid', cursive;
+  font-size: 32px;
+  font-weight: 400;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+
+.name-dropdown-btn:active {
+  background: rgba(255, 255, 255, 0.2); /* Slight feedback when tapped */
+}
