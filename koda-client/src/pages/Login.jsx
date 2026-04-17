@@ -99,6 +99,20 @@ const Login = () => {
         <button className="setup-btn-primary" onClick={handleLogin} disabled={loading}>
           {loading ? "logging in..." : "Login"}
         </button>
+        <button 
+          type="button"
+          style={{ 
+            background: "none", 
+            border: "none", 
+            textDecoration: "underline", 
+            cursor: "pointer", 
+            marginTop: "10px",
+            fontSize: "14px"
+          }}
+          onClick={() => navigate("/forgot-password")}
+        >
+          Forgot Password?
+        </button>
 
         <p className="setup-footer">
           Don't have an account? <a onClick={() => navigate("/registering")}>Sign Up</a>

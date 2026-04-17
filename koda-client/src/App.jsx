@@ -5,8 +5,10 @@ import AvatarSelection from './pages/avatarSelection';
 import Welcome from './pages/welcome';
 import Registering from './pages/registering';
 import Login from './pages/Login';
+import ForgotPassword from './pages/ForgotPassword';
 import ChildRegistration from './pages/childRegistration';
 import Activities from './pages/Activities';
+import ResetPassword from "./pages/ResetPassword";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/childRegistration" element={<ChildRegistration />} />
         <Route path="/ParentDashboard" element={<ParentDashboard />} />
         <Route path="/add-activity" element={<Activities />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
       </Routes>
     </Router>
   );
